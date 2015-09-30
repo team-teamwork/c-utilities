@@ -2,7 +2,15 @@
 
 Collection of reusable C utility functions, data structures and macros.
 
-# logger.h
+# Datastructures
+
+## Queue
+
+A thread-safe queue implementation.
+
+# Utilities
+
+## logger.h
 
 Compile your program with -DEBUGMSG to enable the `log_debug` macro.
 
