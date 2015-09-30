@@ -4,6 +4,10 @@ Collection of reusable C utility functions, data structures and macros.
 
 # logger.h
 
+Compile your program with -DEBUGMSG to enable the `log_debug` macro.
+
+Sample program:
+
 ```c
 int main(void) {
     log_error("Something horrible happened");
@@ -17,7 +21,7 @@ int main(void) {
 }
 ```
 
-Output:
+Sample output:
 
 ```
 logger.c:5 in function: "main" errno: "None" [ERROR] Something horrible happened
