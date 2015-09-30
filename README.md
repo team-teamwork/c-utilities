@@ -12,7 +12,8 @@ A thread-safe queue implementation.
 
 ## logger.h
 
-Compile your program with -DEBUGMSG to enable the `log_debug` macro.
+Compile your program with the following flag: `-DEBUGMSG` to enable
+the `log_debug` macro.
 
 Sample program:
 
