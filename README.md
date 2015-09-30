@@ -1,2 +1,4 @@
 # c-utilities
-Collection of reusable C utility functions and macros.
+
+Collection of reusable C utility functions, data structures and macros.
+
