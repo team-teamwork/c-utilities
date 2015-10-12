@@ -30,12 +30,23 @@ int main(void) {
 }
 ```
 
-Sample output:
+If the program is compiled without the `-DEBUGMSG` flag the resulting output of running the program would be:
 
 ```
 logger.c:5 in function: "main" errno: "None" [ERROR] Something horrible happened
 logger.c:6 in function: "main" errno: "None" [WARN] We can recover from this
 logger.c:7 in function: "main" errno: "None" [INFO] I think you should know this
+logger.c:10 in function: "main" errno: "None" [INFO] All logging macros works with variables
+logger.c:12 in function: "main" errno: "Resource temporarily unavailable" [ERROR] Operation would block!
+```
+
+Consequently if the program is compiled with the `-DEBUGMSG` flag the resulting output would be:
+
+```
+logger.c:5 in function: "main" errno: "None" [ERROR] Something horrible happened
+logger.c:6 in function: "main" errno: "None" [WARN] We can recover from this
+logger.c:7 in function: "main" errno: "None" [INFO] I think you should know this
+logger.c:8 in function: "main" errno: "None" [DEBUG] This is only during development
 logger.c:10 in function: "main" errno: "None" [INFO] All logging macros works with variables
 logger.c:12 in function: "main" errno: "Resource temporarily unavailable" [ERROR] Operation would block!
 ```
