@@ -34,4 +34,6 @@
   } while (0)
 #endif
 
+#define enum2str(x) #x
+
 #endif
