@@ -16,7 +16,11 @@
                 file_info, __func__, strerrno(), ##__VA_ARGS__);        \
     } while (0)
 
-#define log_error(MESSAGE, ...) log("ERROR", MESSAGE, ##__VA_ARGS__)
+#define log_error(MESSAGE, ...) do { \
+    log("ERROR", MESSAGE, ##__VA_ARGS__);       \
+    errno = 0;                                  \
+ } while(0)
+
 #define log_info(MESSAGE, ...) log("INFO", MESSAGE, ##__VA_ARGS__)
 #define log_warn(MESSAGE, ...) log("WARN", MESSAGE, ##__VA_ARGS__)
 
