@@ -55,22 +55,34 @@ test/logger_test.c:11 in function: "logger_tests" errno: "Resource temporarily u
 test/logger_test.c:12 in function: "logger_tests" errno: "None" [INFO] Notice that errno is reset to 0
 ```
 
-Lastly the header file also supplies a nice utility method for stringifying enums, 
-Sample program (`test/enum2str_test.c`):
+# string-utilities 
 
+## `enum2str`
+The headerfile string-utilities supplies a
+nice utility method for stringifying enums
+
+### Example
+
+Given the following enum
 ```c
-#include "logger.h"
-#include "enum2str_test.h"
-
 enum opcode {
     MESSAGE = 10,
 };
+```
 
-void enum2str_tests(void) {
-    log_info("%s", enum2str(MESSAGE));
-}
+The following line outputs "MESSAGE" (sans the quotation marks)
+
+```c
+printf("%s", enum2str(MESSAGE));
 ```
-When executed the function outputs the following,
-```
-MESSAGE
-```
+
+## `STRCMP` & `STRNCMP`
+
+Additionally the header file supplied string comparison macros,
+
++ `STRCMP(a, R, b)`
++ `STRNCMP(a, R, b, n)`
+
+They are documented thoroughly in the header-file, so please
+refer to it for more information and examples. Alternatively
+you may run the tests `string_utils_test.c`.
