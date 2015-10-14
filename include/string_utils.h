@@ -31,4 +31,22 @@
 #define STRCMP(a, R, b) strcmp(a, b) R 0
 #define STRNCMP(a, R, b, n) strncmp(a, b, n) R 0
 
+/* 
+ * Converts a supplied enum into its string representation 
+ * 
+ * Example:
+ * 
+ * Given the enum, 
+ *
+ * enum opcode {
+ *   MESSAGE = 10,
+ * };
+ *
+ * The following line outputs "MESSAGE" (sans the quotation marks)
+ * 
+ * printf("%s", enum2str(MESSAGE));
+ * 
+ */
+#define enum2str(x) #x
+
 #endif

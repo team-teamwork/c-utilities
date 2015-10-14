@@ -1,11 +1,11 @@
-#include "enum2str_test.h"
+#include "string_utils_test.h"
 #include "queue_test.h"
 #include "logger_test.h"
 
 int main(void) {
     queue_tests();
     logger_tests();
-    enum2str_tests();
+    string_utils_tests();
 
     return 0;
 }
